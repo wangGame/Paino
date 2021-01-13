@@ -30,7 +30,8 @@ public class PainoGame extends Game {
         batch = new CpuSpriteBatch();
         runGame = true;
         Asset asset = new Asset();
-        asset.loading();
+        asset.loadSound();
+        asset.loadFile();
         Constant.asset = asset;
         setScreen(new GameScreen());
     }

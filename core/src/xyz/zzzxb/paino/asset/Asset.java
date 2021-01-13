@@ -11,8 +11,8 @@ import java.util.HashMap;
  */
 public class Asset {
     public HashMap<String, Sound> musicHashMap = new HashMap<>();
-    public void loading(){
-        FileHandle internal = Gdx.files.internal("music/");
+    public void loadSound(){
+        FileHandle internal = Gdx.files.internal("mu/");
         for (FileHandle fileHandle : internal.list()) {
             if (fileHandle.isDirectory()){
                 eachDir(fileHandle);
@@ -36,5 +36,12 @@ public class Asset {
 
     public HashMap<String, Sound> getMusicHashMap() {
         return musicHashMap;
+    }
+
+    public void loadFile(){
+        FileHandle internal = Gdx.files.internal("auto/music.txt");
+        String content = internal.readString();
+        String[] split = content.split("\"],");
+        System.out.println("====>>>>>");
     }
 }
