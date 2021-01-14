@@ -12,7 +12,7 @@ import java.util.HashMap;
 public class Asset {
     public HashMap<String, Sound> musicHashMap = new HashMap<>();
     public void loadSound(){
-        FileHandle internal = Gdx.files.internal("mu/");
+        FileHandle internal = Gdx.files.internal("null/");
         for (FileHandle fileHandle : internal.list()) {
             if (fileHandle.isDirectory()){
                 eachDir(fileHandle);

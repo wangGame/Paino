@@ -6,6 +6,7 @@ import com.badlogic.gdx.graphics.Pixmap;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.tools.texturepacker.TexturePacker;
 
+import xyz.zzzxb.paino.AudioSpectrum;
 import xyz.zzzxb.paino.PainoGame;
 
 public class DesktopLauncher {
@@ -16,6 +17,7 @@ public class DesktopLauncher {
         config.height =600;
         config.width = 25*36;
         new LwjglApplication(new PainoGame(),config);
+//        new LwjglApplication(new AudioSpectrum(),config);
     }
 
     static String[] atlasFileName = {"main"};

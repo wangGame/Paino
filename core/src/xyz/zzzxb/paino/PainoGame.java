@@ -11,6 +11,7 @@ import com.badlogic.gdx.utils.viewport.ExtendViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 
 import xyz.zzzxb.paino.asset.Asset;
+import xyz.zzzxb.paino.asset.MusicDemo;
 import xyz.zzzxb.paino.constant.Constant;
 import xyz.zzzxb.paino.screen.GameScreen;
 
@@ -29,6 +30,9 @@ public class PainoGame extends Game {
         sprite = new Sprite(texture);
         batch = new CpuSpriteBatch();
         runGame = true;
+        MusicDemo demo = new MusicDemo();
+        demo.loadMusic();
+        Constant.alltime = demo.getAllTime();
         Asset asset = new Asset();
         asset.loadSound();
         asset.loadFile();
