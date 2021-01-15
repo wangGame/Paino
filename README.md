@@ -235,6 +235,8 @@ public static void main(String[] args) {
 System.out.println(new String(bytes, Charset.forName("GB18030")));
 ```
 
+这个有问题，汉语显示有一些问题  ，实际的信息和歌曲的名字没有什么关系，  比如将歌曲名字改位1.MP3，但是在解析data的时候并不是1，而是原来的名字。
+
 基本就是这个过程，一直向下读取数据
 
 直到不包含头信息结束。
