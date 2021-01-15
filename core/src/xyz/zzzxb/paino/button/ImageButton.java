@@ -1,4 +1,4 @@
-package xyz.zzzxb.paino;
+package xyz.zzzxb.paino.button;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
@@ -16,7 +16,6 @@ public class ImageButton extends Image {
             @Override
             public void clicked(InputEvent event, float x, float y) {
                 super.clicked(event, x, y);
-
                 int  readSamples = Constant.decode.readSamples(arrTemp, 0, arrTemp.length);
                 Constant.devide.writeSamples(arrTemp, 0, readSamples);
             }

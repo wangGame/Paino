@@ -1,4 +1,4 @@
-package xyz.zzzxb.paino;
+package xyz.zzzxb.paino.fft;
 
 public class FFT {
 

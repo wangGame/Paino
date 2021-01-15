@@ -1,4 +1,4 @@
-package xyz.zzzxb.paino;
+package xyz.zzzxb.paino.musicutils;
 
 import org.jaudiotagger.audio.AudioFileIO;
 import org.jaudiotagger.audio.mp3.MP3AudioHeader;

@@ -1,8 +1,7 @@
-package xyz.zzzxb.paino;
+package xyz.zzzxb.paino.musicutils;
 
 import com.badlogic.gdx.files.FileHandle;
 
-import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.util.ArrayList;
@@ -14,12 +13,11 @@ public class MyMp3FileReader {
     private FileInputStream is=null;
     private DataInfo dataInfo;
     private byte[] data;
-    public MyMp3FileReader(FileHandle _filename){
+    public MyMp3FileReader(File file){
         String[] mlabels={"AENC", "APIC", "COMM", "COMR", "ENCR", "EQUA", "ETCO", "GEOB", "GRID", "IPLS", "LINK", "MCDI", "MLLT", "OWNE", "PRIV", "PCNT", "POPM", "POSS", "RBUF", "RVAD", "RVRB", "SYLT", "SYTC", "TALB", "TBPM", "TCOM", "TCON", "TCOP", "TDAT", "TDLY", "TENC", "TEXT", "TFLT", "TIME", "TIT1", "TIT2", "TIT3", "TKEY", "TLAN", "TLEN", "TMED", "TOAL", "TOFN", "TOLY", "TOPE", "TORY", "TOWN", "TPE1", "TPE2", "TPE3", "TPE4", "TPOS", "TPUB", "TRCK", "TRDA", "TRSN", "TRSO", "TSIZ", "TSRC", "TSSE", "TYER", "TXXX", "UFID", "USER", "USLT", "WCOM", "WCOP", "WOAF", "WOAR", "WOAS", "WORS", "WPAY", "WPUB", "WXXX"};
         for(String s:mlabels){
             labels.add(s);
         }
-        File file = _filename.file();
         try{
             is=new FileInputStream(file);
             byte[] bufFront=new byte[10];
