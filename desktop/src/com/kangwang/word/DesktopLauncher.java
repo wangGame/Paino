@@ -16,6 +16,7 @@ public class DesktopLauncher {
         config.height =600;
         config.width = 25*36;
         new LwjglApplication(new PainoGame(),config);
+//        new LwjglApplication(new AudioSpectrum(),config);
     }
 
     static String[] atlasFileName = {"main"};
